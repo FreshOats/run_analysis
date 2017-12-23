@@ -95,4 +95,4 @@ tidyData <- group_by(descriptiveData, subject, activity)
 tidyData <- summarize_all(tidyData, mean)
 activityData <- arrange(tidyData, activity, subject)
 
-View(tidyData)
+tidyDataprint <- write.table(./tidyData, filename = "tidyData.txt", row.names = FALSE)
